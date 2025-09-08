@@ -15,16 +15,13 @@ describe('SimpleBank', () => {
         expect(() => component.withdraw(-1)).toThrowError();
     });
 
-    it('should not throw an Error if the deposit amount is > 0', () => {
-        expect(() => component.deposit(2)).not.toThrowError();
-    });
-
-    it('should not throw an Error if the withdraw amount is > 0', () => {
-        expect(() => component.withdraw(4)).not.toThrowError();
-    });
-
-    it('should return the correct balance', () => {
+    it('should deposit the correct amount', () => {
         component.deposit(4);
         expect(component.balance).toEqual(4);
+    });
+
+    it('should withdraw the correct amount', () => {
+        component.withdraw(2);
+        expect(component.balance).toEqual(-2);
     });
 });

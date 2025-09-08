@@ -9,7 +9,6 @@ export class SimpleBank {
         if (amount <= 0) {
             throw new Error('Deposit amount must be more than zero');
         }
-
         this._balance += amount;
     }
 
