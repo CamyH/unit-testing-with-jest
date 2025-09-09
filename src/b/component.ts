@@ -9,7 +9,7 @@ export class Profile {
     // If you have written adequate unit tests for this file,
     // you'll find a bug! Have a go at fixing it and make sure your
     // tests pass. I think we can use the user isAdmin field :)
-    public get isAdmin(): boolean | undefined {
+    public get isAdmin(): boolean {
         return this.user?.isAdmin ?? false;
     }
 }
